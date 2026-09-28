@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Webbutveckling - Uppgift 4 - but play around with CSS</title>
+  </head>
+  <body>
+
+    <div class="titleBox">
+      <div class="bounceyText">
+        <h1>ToDo LIST WEBB APP</h1>
+      </div>
+      
+    </div>
+
+    <div class="whyImDoingThis"> 
+      <p> Denna är första lektionen för HTML och CSS kursen. Basically leker runt med css och html</p>
+    </div>
+
+    <div class="boxForAll">
+        <label for="numbOfLists" >Skriv in något du vill lägga till: </label><br>
+        <input type="text" id="numbOfLists"><br>
+
+        <br> <p id="noText"></p>
+
+
+
+        <!-- UPPGIFTS LISTAN-->
+    <ul id="uppgiftLista"></ul>
+
+    <!--KNAPPEN SOM LÄGGER TILL-->
+    <button class="button" type="button" id="addListBtn"> Lägg till Lista</button>
+
+    </div>
+
+    <!--ANTAL KLARA-->
+    <div class="box2">
+        <h2>Antal Klara: <span id="antalKlara">0</span></h2>
+    </div>
+
+  <!-- -->
+
+    <script src="code.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+body{
+    background-color:rgb(252, 250, 219);
+    font-family: "Times New Roman", serif;
+}
+
+ul{
+    font-size: 17px;
+}
+
+label{
+    font-size: 17px;
+    font-weight: bold;
+}
+/*P rutan för att berätta vad just denna grej är till för och varför jag leker runt*/
+.whyImDoingThis{
+    margin: 10px;
+    padding: 10px 25px;
+    border: 3px solid black;
+    background-color: rgb(233, 158, 252);
+    font-size: larger;
+}
+
+/*Animation för TITLE LÅDAN*/
+@keyframes titleAnimation{
+    0% {background-color: blue;}
+    10% {background-color: rgb(171, 241, 8);}
+    20% {background-color: rgb(55, 241, 8);}
+    30% {background-color: rgb(241, 16, 8);}
+    40% {background-color: rgb(255, 0, 157);}
+    50% {background-color: rgb(0, 10, 155);}
+    60% {background-color: rgb(231, 81, 43);}
+    70% {background-color: rgb(223, 1, 156);}
+    80% {background-color: rgb(134, 0, 128);}
+    20% {background-color: rgb(199, 72, 13);}
+    100% {background-color: rgb(248, 235, 44);}
+}
+
+/*Ny animation så texten studar åt sådorna*/
+@keyframes textAnimation{
+    from {transform: translateX(0);}
+    to {transform: translateX(calc(100cqw - 100%));}
+}
+
+/*h1 lådan som är TITLE LÅDAN*/
+.titleBox{
+    border: 5px outset black;     /*Utsidan av rutan*/
+    
+    text-align: left;             /*texten startar vänster, annars sätt skiten center om animationen inte vill funka*/
+    overflow: hidden;               /*INGET SKIT STICKER UT*/
+    container-type: inline-size;    /*så 100cqw = lådans breed*/
+    animation-name: titleAnimation; /*Animationens namn*/
+    animation-duration: 6s;         /*Hur länge den ska köras*/
+    animation-iteration-count: infinite;    /*Den spelas oändligt*/
+}
+
+
+.bounceyText{
+    display: inline-block;
+    animation: textAnimation 8s ease-in-out infinite alternate;
+}
+
+.box2:hover{
+    color: red;
+    font-size: larger;
+}
+
+p{
+    color: red;
+    font-weight: bold;
+}
+
+/*horar du över vilken p som helst så ändras färgen till grön*/
+p:hover{
+    color: darkgreen;
+}
+
+/*LISTAN*/
+li {    
+    padding: 8px;
+    margin:6px;
+    background-color: #f0f0f0;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*LIST WRAPPER så soptunnan är åt höger*/
+.li-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:hover {
+    background-color: #dbdbdb;
+}
+
+.Klar{
+    text-decoration: line-through;
+    color:rgb(255, 0, 0);
+}
+
+/*Allt i rutan föruom ANTAL KLARR*/
+.boxForAll{
+    margin: 10px;
+    background: rgb(248, 179, 50);
+    padding:25px;
+    
+    border: 5px outset rgb(206, 170, 72);
+}
+
+/*KNAPPEN*/
+button{
+border: 6px outset ;
+  border-radius: 12px;
+  font-size: large;
+  border-color: rgb(199, 171, 13);
+  background: rgb(255, 235, 122)
+}
+
+/*hora över knappen ändrar färg*/
+button:hover{
+    background-color: rgb(252, 225, 75)
+}
